@@ -1,0 +1,5 @@
+1-idlj -fall  ReverseModule.idl
+2-javac *.java  ReverseModule/*.java
+3-orbd -ORBInitialPort 1050&
+4-java ReverseServer -ORBInitialPort 1050& -ORBInitialHost localhost&
+5- java ReverseClient -ORBInitialPort 1050 -ORBInitialHost localhost
